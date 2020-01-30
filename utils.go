@@ -7,16 +7,16 @@ import (
 	"crypto/sha256"
 	"encoding/base64"
 	"fmt"
-	"github.com/sirupsen/logrus"
 	"net/url"
 	"sort"
 	"strings"
+
+	"github.com/Sirupsen/logrus"
 )
 
 func Numbers(numbers ...string) string {
 	return strings.Join(numbers, "<")
 }
-
 
 func headersWithSep(headers map[string]string, keyValSep, itemSep string, escape bool) string {
 	v := url.Values{}
